@@ -36,12 +36,13 @@ class GFG {
 
 class Compute {
     
-    public int largest(int arr[], int n)
-    {
-        int big = Integer.MIN_VALUE;
-        for(int i = 0; i<n; i++){
-            big = Math.max(big,arr[i]);
+    public int largest(int arr[], int n){
+        int l = arr[0];
+        for(int i=1; i<n; i++){
+            if(arr[i] > l){
+                l = arr[i];
+            }
         }
-        return big;
+        return l;
     }
 }
